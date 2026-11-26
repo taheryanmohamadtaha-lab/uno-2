@@ -59,7 +59,7 @@ class WildColorDialog extends StatelessWidget {
           border: Border.all(color: Colors.white, width: 2.5),
           boxShadow: [
             BoxShadow(
-              color: uiColor.withOpacity(0.55),
+              color: uiColor.withValues(alpha: 0.55),
               blurRadius: 12,
               offset: const Offset(0, 6),
             ),

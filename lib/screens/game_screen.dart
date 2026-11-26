@@ -208,7 +208,7 @@ class GameScreen extends ConsumerWidget {
           return Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
-              color: isTurn ? char.primaryColor.withOpacity(0.35) : Colors.black38,
+              color: isTurn ? char.primaryColor.withValues(alpha: 0.35) : Colors.black38,
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: isTurn ? Colors.amberAccent : Colors.white24,
@@ -300,7 +300,7 @@ class GameScreen extends ConsumerWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.6),
+              color: Colors.black.withValues(alpha: 0.6),
               blurRadius: 24,
               offset: const Offset(0, 14),
             ),

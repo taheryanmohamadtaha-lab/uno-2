@@ -24,7 +24,7 @@ class UnoCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderColor = playable ? Colors.white : Colors.white.withOpacity(0.75);
+    final borderColor = playable ? Colors.white : Colors.white.withValues(alpha: 0.75);
     final baseColor = faceDown
         ? _backColor(cardBackStyle)
         : (card?.uiColor ?? const Color(0xFF1E293B));
@@ -42,13 +42,13 @@ class UnoCardWidget extends StatelessWidget {
           // 3D card thickness & drop shadow
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.45),
+              color: Colors.black.withValues(alpha: 0.45),
               offset: const Offset(0, 7),
               blurRadius: 10,
             ),
             if (playable)
               BoxShadow(
-                color: Colors.amberAccent.withOpacity(0.65),
+                color: Colors.amberAccent.withValues(alpha: 0.65),
                 blurRadius: 14,
                 spreadRadius: 1,
               ),
@@ -79,8 +79,8 @@ class UnoCardWidget extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Colors.white.withOpacity(0.28),
-                      Colors.white.withOpacity(0.0),
+                      Colors.white.withValues(alpha: 0.28),
+                      Colors.white.withValues(alpha: 0.0),
                     ],
                   ),
                 ),
@@ -128,10 +128,10 @@ class UnoCardWidget extends StatelessWidget {
                   width: width * 0.68,
                   height: height * 0.56,
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.18),
+                    color: Colors.white.withValues(alpha: 0.18),
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(
-                      color: Colors.white.withOpacity(0.55),
+                      color: Colors.white.withValues(alpha: 0.55),
                       width: 1.5,
                     ),
                   ),

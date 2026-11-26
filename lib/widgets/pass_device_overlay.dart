@@ -19,7 +19,7 @@ class PassDeviceOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color(0xFF090E1E).withOpacity(0.96),
+      color: const Color(0xFF090E1E).withValues(alpha: 0.96),
       child: Center(
         child: Card(
           color: const Color(0xFF162038),
